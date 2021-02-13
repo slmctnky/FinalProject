@@ -39,10 +39,10 @@ namespace Business.Concrete
         {
             //gerekli işkodları.
 
-            if (DateTime.Now.Hour<24)
-            {
-                return new ErrorDataResult<List<Product>>(Messages.MaintenanceTime);
-            }
+            //if (DateTime.Now.Hour<24)
+            //{
+            //    return new ErrorDataResult<List<Product>>(Messages.MaintenanceTime);
+            //}
             return new SuccessDataResult<List<Product>>(_productDal.GetAll(),Messages.ProductListed);
 
         }
